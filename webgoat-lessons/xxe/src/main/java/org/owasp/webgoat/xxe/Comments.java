@@ -97,7 +97,7 @@ public class Comments {
         	xif.setProperty(XMLConstants.ACCESS_EXTERNAL_DTD, ""); // Compliant
         	xif.setProperty(XMLConstants.ACCESS_EXTERNAL_SCHEMA, "");  // compliant
         }
-        
+        xif.setProperty(XMLInputFactory.SUPPORT_DTD, false);
         var xsr = xif.createXMLStreamReader(new StringReader(xml));
 
         var unmarshaller = jc.createUnmarshaller();
